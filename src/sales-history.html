@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sales History</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Sales History</h1>
+
+  <nav>
+    <a href="./index.html">Dashboard</a>
+    <a href="./products.html">Products</a>
+    <a href="./sales.html">Today</a>
+    <a href="./sales-history.html">History</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+
+  <button onclick="setFilter('today')">Today</button>
+  <button onclick="setFilter('week')">This Week</button>
+  <button onclick="setFilter('month')">This Month</button>
+  <button onclick="setFilter('all')">All Time</button>
+
+</div>
+
+<!-- TABLE -->
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Revenue</th>
+      <th>Profit</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody id="historyTable"></tbody>
+</table>
+
+</main>
+
+<script type="module" src="./js/sales-history.js"></script>
+
+</body>
+</html>

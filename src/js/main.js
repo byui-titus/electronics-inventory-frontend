@@ -95,3 +95,9 @@ export async function getTodaySales() {
 
     return await response.json();
 }
+
+export async function getAllSales() {
+  const response = await fetch(`${API_BASE}/Sales`);
+
+  return await response.json();
+}

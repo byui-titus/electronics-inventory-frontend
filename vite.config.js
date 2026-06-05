@@ -17,6 +17,7 @@ export default defineConfig({
                 addProduct: resolve(__dirname, "src/add-product.html"),
                 editProduct: resolve(__dirname, "src/edit-product.html"),
                 sales: resolve(__dirname, "src/sales.html"),
+                saleHistory: resolve(__dirname, "src/sales-history.html"),
             },
         },
     },

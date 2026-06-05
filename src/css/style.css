@@ -231,3 +231,22 @@ main form#productForm button[type="submit"]:hover {
   background-color: red;
   color: white;
 }
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 15px;
+}
+
+.filters button {
+  padding: 8px 12px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filters button:hover {
+  background: #555;
+}
