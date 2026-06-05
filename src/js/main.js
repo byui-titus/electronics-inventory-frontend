@@ -60,3 +60,25 @@ export async function updateProduct(id, product) {
   }
   return await response .json();
 }
+
+export async function sellProduct(id, quantitySold) {
+
+  const response = await fetch(
+    `${API_BASE}/Sales/sell/${id}`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        quantitySold
+      })
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error('Failed to record sale');
+  }
+
+  return await response.json();
+}

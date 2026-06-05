@@ -1,4 +1,5 @@
 import { getProducts } from './main';
+import { sellProduct } from './main.js';
 
 const tableBody = document.getElementById('productsTable');
 const searchInput = document.getElementById('searchInput');
@@ -35,6 +36,9 @@ function displayProducts(products) {
         <button class="edit-btn" data-id="${product._id}">
           Edit
         </button>
+        <button class="sell-btn" data-id="${product._id}">
+          Sell
+        </button>
         <button class="delete-btn" data-id="${product._id}">
           Delete
         </button>
@@ -46,6 +50,7 @@ function displayProducts(products) {
 
   attachDeleteEvents();
   attachEditEvents();
+  attachSellEvents();
 }
 
 async function deleteProduct(id) {
@@ -134,4 +139,45 @@ function attachEditEvents() {
         `edit-product.html?id=${id}`;
     });
   });
+}
+
+function attachSellEvents() {
+
+  const sellButtons =
+    document.querySelectorAll('.sell-btn');
+
+  sellButtons.forEach(button => {
+
+    button.addEventListener('click', async () => {
+
+      const id = button.dataset.id;
+
+      const quantitySold = prompt(
+        'Enter quantity sold'
+      );
+
+      if (!quantitySold) return;
+
+      try {
+
+        await sellProduct(
+          id,
+          Number(quantitySold)
+        );
+
+        alert('Sale recorded successfully');
+
+        loadProducts();
+
+      } catch (error) {
+
+        console.error(error);
+
+        alert('Failed to record sale');
+      }
+
+    });
+
+  });
+
 }
