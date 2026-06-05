@@ -11,13 +11,6 @@ async function loadDashboard() {
 
         document.getElementById('lowStockProducts')
             .textContent = data.lowStockProducts;
-
-        document.getElementById('totalRevenue')
-            .textContent = data.totalRevenue;
-
-        document.getElementById('totalProfit')
-            .textContent = data.totalProfit;
-
     } catch (error) {
 
         console.error(error);
