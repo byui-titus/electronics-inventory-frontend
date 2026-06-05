@@ -6,39 +6,90 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+<body>
 
-  <header>
-        <h1>Edit Product</h1>
+    <!-- Sidebar -->
+    <div class="sidebar">
 
-        <nav>
-            <a href="./index.html">Dashboard</a>
-            <a href="./product.html">Products</a>
-            <a href="./add-product.html">Add product</a>
-            <a href="./sales.html">Sales</a>
-        </nav>
-    </header>
+        <h2>Inventory</h2>
 
-<main>
+        <a href="./index.html">Dashboard</a>
+        <a href="./product.html">Products</a>
+        <a href="./add-product.html">Add Product</a>
+        <a href="./sales.html">Sales</a>
+        <a href="./sales-history.html">History</a>
 
-  <form id="editForm">
+    </div>
 
-    <input type="text" id="productName" placeholder="Product Name" required>
+    <!-- Main Content -->
+    <div class="main-content">
 
-    <input type="text" id="category" placeholder="Category" required>
+        <section class="edit-product-page">
 
-    <input type="text" id="brand" placeholder="Brand" required>
+            <h1>Edit Product</h1>
 
-    <input type="number" id="quantity" placeholder="Quantity" required>
+            <div class="form-card">
 
-    <input type="number" id="buyingPrice" placeholder="Buying Price" required>
+                <form id="editForm">
 
-    <input type="number" id="sellingPrice" placeholder="Selling Price" required>
+                    <input
+                        type="text"
+                        id="productName"
+                        placeholder="Product Name"
+                        required
+                    >
 
-    <button type="submit">Update Product</button>
+                    <input
+                        type="text"
+                        id="category"
+                        placeholder="Category"
+                        required
+                    >
 
-  </form>
+                    <input
+                        type="text"
+                        id="brand"
+                        placeholder="Brand"
+                        required
+                    >
 
-</main>
+                    <input
+                        type="number"
+                        id="quantity"
+                        placeholder="Quantity"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="buyingPrice"
+                        placeholder="Buying Price"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="sellingPrice"
+                        placeholder="Selling Price"
+                        required
+                    >
+
+                    <button type="submit">
+                        Update Product
+                    </button>
+
+                </form>
+                <div class="form-actions">
+                  <a href="./product.html" class="cancel-btn">
+                        Cancel
+                   </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
 
 <script type="module" src="./js/edit-product.js"></script>
 

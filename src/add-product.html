@@ -9,70 +9,83 @@
 </head>
 <body>
 
-<header>
-  <h1>Add Product</h1>
+    <!-- Sidebar -->
+    <div class="sidebar">
 
-      <nav>
+        <h2>Topaz Inventory</h2>
+
         <a href="./index.html">Dashboard</a>
-        <a href="./product.html">Products</a>
-        <a href="./add-product.html">Add product</a>
-        <a href="./sales.html">Sales</a>
-    </nav>
-</header>
+        <a href="./product.html" >Products</a>
+        <a href="./add-product.html" class="active">Add Product</a>
+        <a href="./sales.html" >Sales</a>
+        <a href="./sales-history.html">History</a>
 
-<main>
+    </div>
 
-  <form id="productForm">
+    <!-- Main Content -->
+    <div class="main-content">
 
-    <input
-      type="text"
-      id="productName"
-      placeholder="Product Name"
-      required
-    >
+        <section class="add-product-page">
 
-    <input
-      type="text"
-      id="category"
-      placeholder="Category"
-      required
-    >
+            <h1>Add Product</h1>
 
-    <input
-      type="text"
-      id="brand"
-      placeholder="Brand"
-      required
-    >
+            <div class="form-card">
 
-    <input
-      type="number"
-      id="quantity"
-      placeholder="Quantity"
-      required
-    >
+                <form id="productForm">
 
-    <input
-      type="number"
-      id="buyingPrice"
-      placeholder="Buying Price"
-      required
-    >
+                    <input
+                        type="text"
+                        id="productName"
+                        placeholder="Product Name"
+                        required
+                    >
 
-    <input
-      type="number"
-      id="sellingPrice"
-      placeholder="Selling Price"
-      required
-    >
+                    <input
+                        type="text"
+                        id="category"
+                        placeholder="Category"
+                        required
+                    >
 
-    <button type="submit">
-      Add Product
-    </button>
+                    <input
+                        type="text"
+                        id="brand"
+                        placeholder="Brand"
+                        required
+                    >
 
-  </form>
+                    <input
+                        type="number"
+                        id="quantity"
+                        placeholder="Quantity"
+                        required
+                    >
 
-</main>
+                    <input
+                        type="number"
+                        id="buyingPrice"
+                        placeholder="Buying Price"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="sellingPrice"
+                        placeholder="Selling Price"
+                        required
+                    >
+
+                    <button type="submit">
+                        Add Product
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
 
 <script type="module" src="./js/add-product.js"></script>
 

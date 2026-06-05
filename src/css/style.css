@@ -4,209 +4,231 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
+body {
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    background: #f4f6f9;
 }
 
-/* Modern Header Navigation Styles */
-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  box-sizing: border-box;
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+    position: fixed;
 }
 
-/* Centers content and arranges Title and Navigation side-by-side */
-header h1, 
-header nav {
-  display: flex;
-  align-items: center;
+.sidebar h2 {
+    color: #00d1b2;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  height: 70px;
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
-/* Dashboard Title Style */
-/* Dashboard Title Style */
-header h1 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 0;
-  letter-spacing: -0.5px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.sidebar a:hover {
+    background: #374151;
 }
 
-/* Subtle accent block next to the text */
-header h1::before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 20px;
-  background-color: #4f46e5; /* Matches your form button color */
-  border-radius: 4px;
+/* MAIN */
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    width: 100%;
 }
 
-
-/* Navigation Link Container */
-header nav {
-  gap: 24px;
+/* CARDS */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
-/* Navigation Links */
-header nav a {
-  text-decoration: none;
-  color: #64748b;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 8px 0;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Hover effect on Links */
-header nav a:hover {
-  color: #4f46e5; /* Modern Indigo matching your form button */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* Mobile breakdown for small screens */
-@media (max-width: 640px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 16px 20px;
-    gap: 12px;
-  }
-  
-  header nav {
-    gap: 16px;
-  }
+.page-header h1 {
+    margin: 0;
 }
 
-
-.dashboard{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:20px;
+.add-btn {
+    text-decoration: none;
+    background: #16a34a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,.1);
+.add-btn:hover {
+    opacity: 0.9;
 }
 
-.card h2{
-    margin-bottom:10px;
+.search-container {
+    margin-bottom: 20px;
 }
 
-.card p{
-    font-size:2rem;
-    font-weight:bold;
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
 }
 
 th,
 td {
-  padding: 12px;
-  border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
 }
 
-th {
-  background: #222;
-  color: white;
+thead {
+    border-bottom: 2px solid #ddd;
 }
 
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.sell-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    color: white;
+}
 
 .delete-btn {
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+    background: #ef4444;
+    color: white;
 }
 
-.delete-btn:hover {
-  opacity: .9;
-  color:red;
+.low-stock {
+    color: orange;
+    font-weight: bold;
+}
+
+.out-stock {
+    color: red;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.sell-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.table-card {
+    overflow-x: auto;
 }
 
 /* Isolated Form Component Styles */
 /* Modern Product Form Design */
-main form#productForm {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  box-sizing: border-box;
+.form-card {
+    background: white;
+    max-width: 700px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Style all input fields */
-main form#productForm input {
-  width: 100%;
-  padding: 12px 14px;
-  font-size: 0.95rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  outline: none;
-  background-color: #ffffff;
-  color: #1e293b;
-  box-sizing: border-box;
-  transition: all 0.2s ease;
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Input focus style when clicked */
-main form#productForm input:focus {
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+.form-card input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
-/* Style the submit button */
-main form#productForm button[type="submit"] {
-  background-color: #4f46e5;
-  color: #ffffff;
-  border: none;
-  padding: 14px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.2s ease;
+.form-card button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #16a34a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Button hover state */
-main form#productForm button[type="submit"]:hover {
-  background-color: #4338ca;
+.form-card button:hover {
+    opacity: 0.9;
 }
 
+.sidebar a.active {
+    background: #374151;
+    border-left: 4px solid #00d1b2;
+}
 
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cancel-btn {
+    text-decoration: none;
+    background: #6b7280;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    
+}
 .sell-btn,
 .edit-btn,
 .delete-btn {
@@ -233,20 +255,24 @@ main form#productForm button[type="submit"]:hover {
 }
 
 .filters {
-  display: flex;
-  gap: 10px;
-  margin: 15px;
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 .filters button {
-  padding: 8px 12px;
-  border: none;
-  background: #333;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
+    background: #1f2937;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .filters button:hover {
-  background: #555;
+    background: #374151;
+}
+
+.sales-history-page .dashboard {
+    margin-bottom: 20px;
 }

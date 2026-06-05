@@ -6,19 +6,26 @@
 </head>
 <body>
 
-<header>
-  <h1>Sales History</h1>
+<div class="sidebar">
 
-  <nav>
+    <h2>Inventory</h2>
+
     <a href="./index.html">Dashboard</a>
-    <a href="./products.html">Products</a>
-    <a href="./sales.html">Today</a>
-    <a href="./sales-history.html">History</a>
-  </nav>
-</header>
+    <a href="./product.html">Products</a>
+    <a href="./add-product.html">Add Product</a>
+    <a href="./sales.html">Sales</a>
+    <a href="./sales-history.html" class="active">History</a>
 
-<main>
-  <section class="dashboard">
+</div>
+
+<div class="main-content">
+
+    <section class="sales-history-page">
+
+        <h1>Sales History</h1>
+
+        <div class="dashboard">
+
             <div class="card">
                 <h2>Total Revenue</h2>
                 <p id="totalRevenue">Loading...</p>
@@ -29,34 +36,51 @@
                 <p id="totalProfit">Loading...</p>
             </div>
 
-        </section>
+        </div>
 
-<!-- FILTER BUTTONS -->
-<div class="filters">
+        <div class="filters">
 
-  <button onclick="setFilter('today')">Today</button>
-  <button onclick="setFilter('week')">This Week</button>
-  <button onclick="setFilter('month')">This Month</button>
-  <button onclick="setFilter('all')">All Time</button>
+            <button onclick="setFilter('today')">
+                Today
+            </button>
+
+            <button onclick="setFilter('week')">
+                This Week
+            </button>
+
+            <button onclick="setFilter('month')">
+                This Month
+            </button>
+
+            <button onclick="setFilter('all')">
+                All Time
+            </button>
+
+        </div>
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Revenue</th>
+                        <th>Profit</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody id="historyTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
 
 </div>
-
-<!-- TABLE -->
-<table>
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th>Qty</th>
-      <th>Revenue</th>
-      <th>Profit</th>
-      <th>Date</th>
-    </tr>
-  </thead>
-
-  <tbody id="historyTable"></tbody>
-</table>
-
-</main>
 
 <script type="module" src="./js/sales-history.js"></script>
 

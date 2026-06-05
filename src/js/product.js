@@ -26,10 +26,16 @@ function displayProducts(products) {
       <td>${product.productName}</td>
       <td>${product.brand}</td>
       <td>${product.category}</td>
-      <td class="${product.quantity <= 3 ? 'low-stock' : ''
-      }">
-      ${product.quantity}
-      </td
+      
+      <td>
+    ${
+       product.quantity === 0
+         ? '<span class="out-stock">Out of Stock</span>'
+         : product.quantity <= 3
+           ? '<span class="low-stock">Low Stock</span>'
+           : product.quantity
+     }
+    </td>
       <td>${product.buyingPrice}</td>
       <td>${product.sellingPrice}</td>
       <td>

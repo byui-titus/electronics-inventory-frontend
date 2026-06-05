@@ -8,55 +8,65 @@
 </head>
 <body>
 
-<header>
-    <h1>Today's Sales</h1>
+<div class="sidebar">
 
-    <nav>
-        <a href="./index.html">Dashboard</a>
-        <a href="./products.html">Products</a>
-        <a href="./add-product.html">Add Product</a>
-        <a href="./sales.html">Sales</a>
-        <a href="./sales-history.html">History</a>
-    </nav>
-</header>
+    <h2>Inventory</h2>
 
-<main>
-    <section class="dashboard">
+    <a href="./index.html">Dashboard</a>
+    <a href="./product.html">Products</a>
+    <a href="./add-product.html">Add Product</a>
+    <a href="./sales.html" class="active">Sales</a>
+    <a href="./sales-history.html">History</a>
 
-    <div class="card">
-        <h3>Total Sales Today</h3>
-        <p id="totalSales">0</p>
-    </div>
+</div>
 
-    <div class="card">
-        <h3>Total Revenue</h3>
-        <p id="totalRevenue">0</p>
-    </div>
+<div class="main-content">
 
-    <div class="card">
-        <h3>Total Profit</h3>
-        <p id="totalProfit">0</p>
-    </div>
+    <section class="sales-page">
 
-</section>
+        <h1>Today's Sales</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Quantity Sold</th>
-                <th>Revenue</th>
-                <th>Profit</th>
-                <th>Date</th>
-            </tr>
-        </thead>
+        <div class="dashboard">
 
-        <tbody id="salesTable">
-        </tbody>
+            <div class="card">
+                <h3>Total Sales Today</h3>
+                <p id="totalSales">0</p>
+            </div>
 
-    </table>
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p id="totalRevenue">0</p>
+            </div>
 
-</main>
+            <div class="card">
+                <h3>Total Profit</h3>
+                <p id="totalProfit">0</p>
+            </div>
+
+        </div>
+
+        <div class="table-card">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity Sold</th>
+                        <th>Revenue</th>
+                        <th>Profit</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody id="salesTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
 
 <script type="module" src="./js/sales.js"></script>
 

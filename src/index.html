@@ -9,37 +9,41 @@
 </head>
 <body>
 
-    <header>
-        <h1>Electronics Inventory Dashboard</h1>
+<!-- SIDEBAR -->
+<div class="sidebar">
 
-        <nav>
-            <a href="./index.html">Dashboard</a>
-            <a href="./product.html">Products</a>
-            <a href="./add-product.html">Add product</a>
-            <a href="./sales.html">Sales</a>
-            <a href="./sales-history.html">History</a>
-        </nav>
-    </header>
-  
+    <h2>Inventory</h2>
 
-    <main>
+    <a href="./index.html" class="active">Dashboard</a>
+    <a href="./product.html" >Products</a>
+    <a href="./add-product.html" >Add Product</a>
+    <a href="./sales.html" >Sales</a>
+    <a href="./sales-history.html" >History</a>
 
-        <section class="dashboard">
+</div>
 
-            <div class="card">
-                <h2>Total Products</h2>
-                <p id="totalProducts">Loading...</p>
-            </div>
+<!-- MAIN CONTENT -->
+<div class="main-content">
 
-            <div class="card">
-                <h2>Low Stock</h2>
-                <p id="lowStockProducts">Loading...</p>
-            </div>
-        </section>
+    <h1>Electronics Inventory Dashboard</h1>
 
-    </main>
+    <section class="dashboard">
 
-    <script type="module" src="./js/dashboard.js"></script>
+        <div class="card">
+            <h2>Total Products</h2>
+            <p id="totalProducts">Loading...</p>
+        </div>
+
+        <div class="card">
+            <h2>Low Stock</h2>
+            <p id="lowStockProducts">Loading...</p>
+        </div>
+
+    </section>
+
+</div>
+
+<script type="module" src="./js/dashboard.js"></script>
 
 </body>
 </html>
