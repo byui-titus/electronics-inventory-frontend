@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Sales</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Today's Sales</h1>
+
+    <nav>
+        <a href="./index.html">Dashboard</a>
+        <a href="./products.html">Products</a>
+        <a href="./add-product.html">Add Product</a>
+        <a href="./sales.html">Sales</a>
+    </nav>
+</header>
+
+<main>
+    <section class="dashboard">
+
+    <div class="card">
+        <h3>Total Sales Today</h3>
+        <p id="totalSales">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Revenue</h3>
+        <p id="totalRevenue">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Profit</h3>
+        <p id="totalProfit">0</p>
+    </div>
+
+</section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity Sold</th>
+                <th>Revenue</th>
+                <th>Profit</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody id="salesTable">
+        </tbody>
+
+    </table>
+
+</main>
+
+<script type="module" src="./js/sales.js"></script>
+
+</body>
+</html>

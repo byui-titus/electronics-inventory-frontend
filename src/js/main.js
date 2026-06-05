@@ -82,3 +82,16 @@ export async function sellProduct(id, quantitySold) {
 
   return await response.json();
 }
+
+export async function getTodaySales() {
+
+    const response = await fetch(
+        `${API_BASE}/Sales/today`
+    );
+
+    if (!response.ok) {
+        throw new Error('Failed to load sales');
+    }
+
+    return await response.json();
+}
