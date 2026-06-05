@@ -1,0 +1,208 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+/* Modern Header Navigation Styles */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Centers content and arranges Title and Navigation side-by-side */
+header h1, 
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 70px;
+}
+
+/* Dashboard Title Style */
+/* Dashboard Title Style */
+header h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Subtle accent block next to the text */
+header h1::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background-color: #4f46e5; /* Matches your form button color */
+  border-radius: 4px;
+}
+
+
+/* Navigation Link Container */
+header nav {
+  gap: 24px;
+}
+
+/* Navigation Links */
+header nav a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect on Links */
+header nav a:hover {
+  color: #4f46e5; /* Modern Indigo matching your form button */
+}
+
+/* Mobile breakdown for small screens */
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  
+  header nav {
+    gap: 16px;
+  }
+}
+
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #222;
+  color: white;
+}
+
+
+.delete-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  opacity: .9;
+  color:red;
+}
+
+/* Isolated Form Component Styles */
+/* Modern Product Form Design */
+main form#productForm {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+/* Style all input fields */
+main form#productForm input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+  color: #1e293b;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* Input focus style when clicked */
+main form#productForm input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+/* Style the submit button */
+main form#productForm button[type="submit"] {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+/* Button hover state */
+main form#productForm button[type="submit"]:hover {
+  background-color: #4338ca;
+}
+
