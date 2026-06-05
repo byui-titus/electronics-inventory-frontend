@@ -44,7 +44,7 @@ form.addEventListener('submit', async (e) => {
 
     alert('Product updated successfully');
 
-    window.location.href = './product.js';
+    window.location.href = '../product.html';
 
   } catch (error) {
     console.error(error);
