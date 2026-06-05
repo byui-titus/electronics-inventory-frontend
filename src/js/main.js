@@ -55,5 +55,8 @@ export async function updateProduct(id, product) {
     }
   );
 
-  return response.json();
+  if (response.status === 204) {
+    return { success: true};
+  }
+  return await response .json();
 }
