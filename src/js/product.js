@@ -32,6 +32,9 @@ function displayProducts(products) {
       <td>${product.buyingPrice}</td>
       <td>${product.sellingPrice}</td>
       <td>
+        <button class="edit-btn" data-id="${product._id}">
+          Edit
+        </button>
         <button class="delete-btn" data-id="${product._id}">
           Delete
         </button>
@@ -42,6 +45,7 @@ function displayProducts(products) {
   });
 
   attachDeleteEvents();
+  attachEditEvents();
 }
 
 async function deleteProduct(id) {
@@ -117,3 +121,17 @@ searchInput.addEventListener('input', () => {
 });
 
 loadProducts();
+
+function attachEditEvents() {
+  const editButtons =
+    document.querySelectorAll('.edit-btn');
+
+  editButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const id = button.dataset.id;
+
+      window.location.href =
+        `edit-product.html?id=${id}`;
+    });
+  });
+}

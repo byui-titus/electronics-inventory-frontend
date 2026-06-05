@@ -42,3 +42,18 @@ export async function createProduct(product) {
 
   return await response.json();
 }
+
+export async function updateProduct(id, product) {
+  const response = await fetch(
+    `${API_BASE}/products/${id}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(product)
+    }
+  );
+
+  return response.json();
+}
