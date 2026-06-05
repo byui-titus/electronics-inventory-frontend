@@ -36,7 +36,7 @@ form.addEventListener('submit', async (e) => {
 
     alert('Product added successfully');
 
-    window.location.href = '../product.html';
+    form.reset();
 
   } catch (error) {
 
