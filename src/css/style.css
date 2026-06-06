@@ -347,4 +347,21 @@ tbody tr:hover {
 .guide-list li {
     margin-bottom: 8px;
     color: #e5e7eb;
+}.receipt {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.receipt h2,
+.receipt h3 {
+    text-align: center;
+}
+
+.receipt button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receipt</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="receipt">
+
+    <h2>Ben Electricals & Phone Accessories</h2>
+    <p>Tel: +256 743774113</p>
+    <p>Kavule, Semuto Rd</p>
+
+    <p><strong>Receipt No:</strong> <span id="receiptNumber"></span></p>
+
+    <p><strong>Date:</strong> <span id="date"></span></p>
+
+    <hr>
+
+    <p><strong>Product:</strong> <span id="product"></span></p>
+
+    <p><strong>Quantity:</strong> <span id="quantity"></span></p>
+
+    <p><strong>Unit Price:</strong> UGX <span id="price"></span></p>
+
+    <hr>
+
+    <h3>Total: UGX <span id="total"></span></h3>
+
+    <button onclick="window.print()">
+        Print Receipt
+    </button>
+
+</div>
+
+<script src="./js/receipt.js"></script>
+
+</body>
+</html>

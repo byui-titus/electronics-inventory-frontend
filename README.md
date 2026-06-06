@@ -1,16 +1,212 @@
-# React + Vite
+# Electronics Inventory Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based inventory management system designed for electronics and accessory shops. The system helps track products, manage stock levels, record sales, monitor profits, and generate sales reports.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+### Dashboard
+- View total products
+- View low stock products
+- Quick navigation to all system modules
+- Usage instructions for new users
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Product Management
+- Add new products
+- Edit existing products
+- Delete products
+- Search products
+- Track product quantities
 
-## Expanding the ESLint configuration
+### Product Groups
+Products are organized into two groups:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Electronic
+- Accessory
+
+Users select a group when adding or editing a product.
+
+### Electronics Page
+Displays only products belonging to the **Electronic** group.
+
+### Accessories Page
+Displays only products belonging to the **Accessory** group.
+
+### Sales Management
+- Record product sales
+- Automatic stock reduction after sale
+- Calculate revenue
+- Calculate profit
+
+### Sales History
+Filter sales by:
+- Today
+- This Week
+- This Month
+- All Time
+
+### Stock Monitoring
+- Low stock alerts
+- Out-of-stock tracking
+
+---
+
+## Technologies Used
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+
+### Deployment
+- Render
+
+---
+
+## Project Structure
+
+```
+frontend/
+│
+├── index.html
+├── product.html
+├── add-product.html
+├── edit-product.html
+├── sales.html
+├── sales-history.html
+├── electronics.html
+├── accessories.html
+│
+├── css/
+│   └── style.css
+│
+└── js/
+    ├── dashboard.js
+    ├── products.js
+    ├── add-product.js
+    ├── edit-product.js
+    ├── sales.js
+    ├── sales-history.js
+    ├── electronics.js
+    └── accessories.js
+
+backend/
+│
+├── controllers/
+├── routes/
+├── middleware/
+├── config/
+├── schemas/
+├── utilities/
+└── server.js
+```
+
+---
+
+## API Endpoints
+
+### Products
+
+| Method | Endpoint | Description |
+|----------|----------|----------|
+| GET | /products | Get all products |
+| GET | /products/:id | Get product by ID |
+| POST | /products | Add product |
+| PUT | /products/:id | Update product |
+| DELETE | /products/:id | Delete product |
+
+### Sales
+
+| Method | Endpoint | Description |
+|----------|----------|----------|
+| POST | /sales/sell/:id | Record a sale |
+| GET | /sales/today | Get today's sales |
+| GET | /sales/history | Get sales history |
+| GET | /sales/profit | Get profit report |
+| GET | /sales/dashboard | Get dashboard statistics |
+
+---
+
+## How To Use
+
+### 1. Add Products
+Navigate to **Add Product** and enter:
+- Product Name
+- Category
+- Brand
+- Group
+- Quantity
+- Buying Price
+- Selling Price
+
+### 2. Manage Products
+Use the Products page to:
+- Search products
+- Edit products
+- Delete products
+
+### 3. Record Sales
+Open the Sales page and sell available products.
+
+The system automatically:
+- Reduces stock quantity
+- Calculates revenue
+- Calculates profit
+
+### 4. View Reports
+Use Sales History to:
+- Review transactions
+- Monitor revenue
+- Monitor profits
+- Filter records by date
+
+---
+
+## Business Rules
+
+### Profit Calculation
+
+```
+Profit = Selling Price - Buying Price
+```
+
+### Revenue Calculation
+
+```
+Revenue = Quantity Sold × Selling Price
+```
+
+### Low Stock
+
+Products with low quantities are displayed in the dashboard for easier restocking.
+
+---
+
+## Future Improvements
+
+- User authentication
+- Role-based access control
+- Export reports to PDF
+- Export reports to Excel
+- Charts and analytics
+- Barcode support
+- Receipt generation
+- Supplier management
+
+---
+
+## Author
+
+**Topaz Movies, Phone Accessories, and Software**
+
+Electronics Inventory Management System
+
+Built using Node.js, Express, MongoDB, HTML, CSS, and JavaScript.

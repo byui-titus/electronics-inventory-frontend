@@ -166,21 +166,24 @@ function attachSellEvents() {
 
       try {
 
-        await sellProduct(
-          id,
-          Number(quantitySold)
-        );
+            const result = await sellProduct(
+              id,
+              Number(quantitySold)
+            );
 
-        alert('Sale recorded successfully');
+            localStorage.setItem(
+              'lastSale',
+              JSON.stringify(result.sale)
+            );
 
-        loadProducts();
+            window.location.href = '../receipt.html';
 
-      } catch (error) {
+          } catch (error) {
 
-        console.error(error);
+            console.error(error);
 
-        alert('Failed to record sale');
-      }
+            alert('Failed to record sale');
+          }
 
     });
 
