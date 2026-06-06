@@ -7,6 +7,9 @@ if (sale) {
     document.getElementById("date").textContent =
         new Date(sale.saleDate).toLocaleString();
 
+    document.getElementById('customerName').textContent = 
+        sale.customerName;
+
     document.getElementById("product").textContent =
         sale.productName;
 
