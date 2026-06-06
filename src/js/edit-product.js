@@ -34,6 +34,7 @@ form.addEventListener('submit', async (e) => {
     productName: document.getElementById('productName').value,
     category: document.getElementById('category').value,
     brand: document.getElementById('brand').value,
+    group: document.getElementById('group').value,
     quantity: Number(document.getElementById('quantity').value),
     buyingPrice: Number(document.getElementById('buyingPrice').value),
     sellingPrice: Number(document.getElementById('sellingPrice').value)

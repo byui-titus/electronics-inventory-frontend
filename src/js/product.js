@@ -36,7 +36,7 @@ function displayProducts(products) {
            : product.quantity
      }
     </td>
-      <td>${product.buyingPrice}</td>
+      <td>${product.group}</td>
       <td>${product.sellingPrice}</td>
       <td>
         <button class="edit-btn" data-id="${product._id}">

@@ -17,6 +17,9 @@ form.addEventListener('submit', async (e) => {
     brand:
       document.getElementById('brand').value,
 
+    group:
+        document.getElementById('group').value,
+
     quantity: Number(
       document.getElementById('quantity').value
     ),

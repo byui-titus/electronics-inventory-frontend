@@ -276,3 +276,19 @@ tbody tr:hover {
 .sales-history-page .dashboard {
     margin-bottom: 20px;
 }
+ .group-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.electronic {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.accessory {
+    background: #dcfce7;
+    color: #15803d;
+}

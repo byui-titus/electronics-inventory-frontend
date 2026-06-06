@@ -88,6 +88,7 @@ export async function getTodaySales() {
     const response = await fetch(
         `${API_BASE}/Sales/today`
     );
+    
 
     if (!response.ok) {
         throw new Error('Failed to load sales');
