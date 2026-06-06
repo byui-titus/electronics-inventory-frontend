@@ -18,6 +18,8 @@ export default defineConfig({
                 editProduct: resolve(__dirname, "src/edit-product.html"),
                 sales: resolve(__dirname, "src/sales.html"),
                 saleHistory: resolve(__dirname, "src/sales-history.html"),
+                electronics: resolve(__dirname, "src/electronics.html"),
+                accessories: resolve(__dirname, "src/accessories.html"),
             },
         },
     },

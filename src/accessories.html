@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>Inventory</h2>
+
+    <a href="./index.html">📊 Dashboard</a>
+    <a href="./product.html" class="active">📦 Products</a>
+    <a href="./add-product.html">➕ Add Product</a>
+    <a href="./sales.html">💰 Sales Today</a>
+    <a href="./sales-history.html">📈 Sales History</a>
+    <a href="./electronics.html">💡 Electronics</a>
+
+</div>
+
+<div class="main-content">
+
+    <div class="page-header">
+
+        <h1>Accessories</h1>
+    </div>
+    <div class="table-card">
+
+        <h2>Product Inventory</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Brand</th>
+                    <th>Quantity</th>
+                    <th>Group</th>
+                    <th>Selling</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="accessoriesTable"></tbody>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+<script type="module" src="./js/accessories.js"></script>
+
+</body>
+</html>
