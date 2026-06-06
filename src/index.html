@@ -12,22 +12,25 @@
 <!-- SIDEBAR -->
 <div class="sidebar">
 
-    <h2>Inventory</h2>
+    <!-- <h2>Inventory</h2>
 
     <a href="./index.html" class="active">Dashboard</a>
     <a href="./product.html" >Products</a>
     <a href="./add-product.html" >Add Product</a>
     <a href="./sales.html" >Sales</a>
     <a href="./sales-history.html" >History</a>
+    -->
 
 </div>
+
+
 
 <!-- MAIN CONTENT -->
 <div class="main-content">
 
     <h1>Electronics Inventory Dashboard</h1>
 
-    <section class="dashboard">
+    <section class="dashboard-stats">
 
         <div class="card">
             <h2>Total Products</h2>
@@ -39,7 +42,40 @@
             <p id="lowStockProducts">Loading...</p>
         </div>
 
+        <div class="card">
+            <h3>Electronics</h3>
+            <p id="electronicsCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Accessories</h3>
+            <p id="accessoriesCount">0</p>
+        </div>
     </section>
+
+    <div class="dashboard-nav">
+
+        <a href="./product.html" class="nav-card">
+            <h2>📦 Products</h2>
+            <p>View all inventory</p>
+        </a>
+
+        <a href="./add-product.html" class="nav-card">
+            <h2>➕ Add Product</h2>
+            <p>Add new stock</p>
+        </a>
+
+        <a href="./sales.html" class="nav-card">
+            <h2>💰 Sales</h2>
+            <p>Today's sales</p>
+        </a>
+
+        <a href="./sales-history.html" class="nav-card">
+            <h2>📈 History</h2>
+            <p>Sales reports</p>
+        </a>
+
+    </div>
 
 </div>
 
