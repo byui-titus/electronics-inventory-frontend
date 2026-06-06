@@ -20,6 +20,7 @@ export default defineConfig({
                 saleHistory: resolve(__dirname, "src/sales-history.html"),
                 electronics: resolve(__dirname, "src/electronics.html"),
                 accessories: resolve(__dirname, "src/accessories.html"),
+                reciept: resolve(__dirname, "src/receipt.html"),
             },
         },
     },
