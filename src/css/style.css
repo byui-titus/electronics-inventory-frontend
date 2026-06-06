@@ -8,7 +8,9 @@ body {
     margin: 0;
     font-family: Arial;
     display: flex;
-    background: #f4f6f9;
+    background-color: white; /* Deep Slate Blue-Dark */
+    color: #00d1b2;
+
 }
 
 /* SIDEBAR */
@@ -50,13 +52,16 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
+
 }
 
 .card {
-    background: white;
+    background: rgb(143, 138, 138);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #a19898;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .page-header {
@@ -98,7 +103,7 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: rgb(128, 125, 125);
 }
 
 th,
@@ -176,7 +181,7 @@ tbody tr:hover {
 /* Isolated Form Component Styles */
 /* Modern Product Form Design */
 .form-card {
-    background: white;
+    background: rgb(158, 154, 154);
     max-width: 700px;
     padding: 25px;
     border-radius: 10px;
