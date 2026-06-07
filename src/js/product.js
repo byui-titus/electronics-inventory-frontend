@@ -170,12 +170,19 @@ function attachSellEvents() {
 
       if (!customerName) return;
 
+      const sellingPrice = prompt(
+        'Enter selling price'
+      );
+
+      if (!sellingPrice) return;
+
       try {
 
             const result = await sellProduct(
               id,
               Number(quantitySold),
-              customerName
+              customerName,
+              Number(sellingPrice)
             );
 
             localStorage.setItem(

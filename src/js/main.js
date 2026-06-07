@@ -61,7 +61,7 @@ export async function updateProduct(id, product) {
   return await response .json();
 }
 
-export async function sellProduct(id, quantitySold, customerName) {
+export async function sellProduct(id, quantitySold, customerName, sellingPrice) {
 
   const response = await fetch(
     `${API_BASE}/Sales/sell/${id}`,
@@ -72,7 +72,9 @@ export async function sellProduct(id, quantitySold, customerName) {
       },
       body: JSON.stringify({
         quantitySold,
-        customerName
+        customerName,
+        sellingPrice
+
       })
     }
   );
