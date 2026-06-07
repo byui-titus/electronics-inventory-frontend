@@ -16,8 +16,8 @@ if (sale) {
     document.getElementById("quantity").textContent =
         sale.quantitySold;
 
-    document.getElementById("price").textContent =
-        sale.unitPrice;
+    ///document.getElementById("price").textContent =
+      //  sale.unitPrice;
 
     document.getElementById("total").textContent =
         sale.revenue;
