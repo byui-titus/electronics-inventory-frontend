@@ -101,7 +101,7 @@ window.setFilter = function(type) {
 function exportPDF() {
 
   window.open(
-    `https://estockly.netlify.app/Sales/report/${currentFilter}`,
+    `https://electronics-inventory-backend.onrender.com/Sales/report/${currentFilter}`,
     '_blank'
   );
 
