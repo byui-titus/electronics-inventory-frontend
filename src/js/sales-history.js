@@ -1,6 +1,7 @@
 import { getAllSales, getDashboard } from './main';
 
 let allSales = [];
+let currentFilter = 'all';
 
 const table = document.getElementById('historyTable');
 
@@ -51,6 +52,8 @@ loadDashboard();
 
 window.setFilter = function(type) {
 
+  currentFilter = type
+
   const now = new Date();
 
   let filtered = [];
@@ -94,3 +97,23 @@ window.setFilter = function(type) {
 
   render(filtered);
 };
+
+function exportPDF() {
+
+  window.open(
+    `https://estockly.netlify.app/${currentFilter}`,
+    '_blank'
+  );
+
+}
+
+const exportBtn = document.getElementById('exportPdfBtn');
+
+if (exportBtn) {
+
+  exportBtn.addEventListener(
+    'click',
+    exportPDF
+  );
+
+}

@@ -365,3 +365,17 @@ tbody tr:hover {
     margin-top: 20px;
     padding: 10px;
 }
+
+#exportPdfBtn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#exportPdfBtn:hover {
+    opacity: 0.9;
+}
