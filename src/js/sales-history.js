@@ -101,7 +101,7 @@ window.setFilter = function(type) {
 function exportPDF() {
 
   window.open(
-    `https://estockly.netlify.app/${currentFilter}`,
+    `https://estockly.netlify.app/Sales/report/${currentFilter}`,
     '_blank'
   );
 
