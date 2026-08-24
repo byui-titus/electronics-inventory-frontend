@@ -79,18 +79,17 @@ async function loadInventoryGroups() {
         const products = await getProducts();
 
 
-        const electronics =
-            products.filter(
-                product =>
-                    product.group === 'electronics'
-            ).length;
+       const electronics =
+    products.filter(
+        product =>
+            product.group === 'electronic'
+    ).length;
 
-
-        const accessories =
-            products.filter(
-                product =>
-                    product.group === 'accessory'
-            ).length;
+const accessories =
+    products.filter(
+        product =>
+            product.group === 'accessory'
+    ).length;
 
 
         const total =
