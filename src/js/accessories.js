@@ -16,8 +16,8 @@ async function loadAccessories() {
                 <td>${p.productName}</td>
                 <td>${p.category}</td>
                 <td>${p.brand}</td>
-                <td>${p.group}</td>
                 <td>${p.quantity}</td>
+                <td>${p.group}</td>     
                 <td>${p.sellingPrice}</td>
             </tr>
         `;
