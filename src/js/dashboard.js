@@ -82,13 +82,13 @@ async function loadInventoryGroups() {
        const electronics =
     products.filter(
         product =>
-            product.group === 'electronic'
+            product.group === 'Electronic'
     ).length;
 
 const accessories =
     products.filter(
         product =>
-            product.group === 'accessory'
+            product.group === 'Accessory'
     ).length;
 
 
