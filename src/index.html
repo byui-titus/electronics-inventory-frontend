@@ -1,104 +1,568 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronics Inventory Dashboard</title>
-    <link rel="icon" href="./public/favicon.jpg" type="image/png">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>EStockly - Dashboard</title>
+
+    <link
+        rel="icon"
+        href="./public/favicon.jpg"
+        type="image/png">
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css">
 </head>
-<body>
 
-<!-- SIDEBAR -->
+<body class="dashboard-page">
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
 <div class="sidebar">
+
+    <div class="dashboard-brand">
+        <h2>EStockly</h2>
+        <p>Inventory System</p>
+    </div>
+
     <div class="sidebar-guide">
 
         <h3>📘 How to Use</h3>
+
         <p class="guide-text">
-            This system helps you manage electronics inventory, sales, and reports.
+            Manage your inventory, sales and reports
+            from one place.
         </p>
 
         <ul class="guide-list">
-            <li>➕ Add products using the Add Product page</li>
-            <li>📦 View and manage all products in Products page</li>
-            <li>💡 Use Electronics / Accessories to filter items</li>
-            <li>💰 Record sales from the Sales page</li>
-            <li>📈 Check performance in Sales History</li>
-            <li>⚠ Monitor low stock and out-of-stock items</li>
+
+            <li>
+                ➕ Add products using Add Product
+            </li>
+
+            <li>
+                📦 Manage products from Products
+            </li>
+
+            <li>
+                💡 Browse Electronics and Accessories
+            </li>
+
+            <li>
+                💰 Record sales from Sales
+            </li>
+
+            <li>
+                📈 Check reports in Sales History
+            </li>
+
+            <li>
+                ⚠ Monitor low-stock products
+            </li>
+
         </ul>
+
     </div>
-    <!-- <h2>Inventory</h2>
-
-
-    <a href="./index.html" class="active">Dashboard</a>
-    <a href="./product.html" >Products</a>
-    <a href="./add-product.html" >Add Product</a>
-    <a href="./sales.html" >Sales</a>
-    <a href="./sales-history.html" >History</a>
-    -->
 
 </div>
 
 
+<!-- =========================================
+     MAIN DASHBOARD
+========================================= -->
 
-<!-- MAIN CONTENT -->
-<div class="main-content">
+<div class="main-content dashboard-main">
 
-    <h1>Electronics Inventory Dashboard</h1>
+    <!-- HEADER -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <p class="dashboard-label">
+                INVENTORY OVERVIEW
+            </p>
+
+            <h1>
+                Good Morning 👋
+            </h1>
+
+            <p class="dashboard-subtitle">
+                Here's what's happening with your
+                inventory today.
+            </p>
+
+        </div>
+
+        <div class="dashboard-date">
+
+            <span id="dashboardDate">
+                Loading...
+            </span>
+
+            <strong id="dashboardTime">
+                Loading...
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         STATISTICS
+    ====================================== -->
 
     <section class="dashboard-stats">
 
-        <div class="card">
-            <h2>Total Products</h2>
-            <p id="totalProducts">Loading...</p>
+        <!-- TOTAL PRODUCTS -->
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon products-icon">
+                📦
+            </div>
+
+            <div class="stat-info">
+
+                <p>Total Products</p>
+
+                <h2 id="totalProducts">
+                    Loading...
+                </h2>
+
+            </div>
+
         </div>
 
-        <div class="card">
-            <h2>Low Stock</h2>
-            <p id="lowStockProducts">Loading...</p>
+
+        <!-- LOW STOCK -->
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon stock-icon">
+                ⚠
+            </div>
+
+            <div class="stat-info">
+
+                <p>Low Stock</p>
+
+                <h2 id="lowStockProducts">
+                    Loading...
+                </h2>
+
+            </div>
+
         </div>
+
+
+        <!-- REVENUE -->
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon revenue-icon">
+                💰
+            </div>
+
+            <div class="stat-info">
+
+                <p>Today's Revenue</p>
+
+                <h2 id="dashboardRevenue">
+                    UGX 0
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFIT -->
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon profit-icon">
+                📈
+            </div>
+
+            <div class="stat-info">
+
+                <p>Today's Profit</p>
+
+                <h2 id="dashboardProfit">
+                    UGX 0
+                </h2>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <div class="dashboard-nav">
 
-        <a href="./product.html" class="nav-card">
-            <h2>📦 Products</h2>
-            <p>View all inventory</p>
-        </a>
+    <!-- =====================================
+         QUICK ACTIONS
+    ====================================== -->
 
-        <a href="./add-product.html" class="nav-card">
-            <h2>➕ Add Product</h2>
-            <p>Add new stock</p>
-        </a>
+    <section class="dashboard-section">
 
-        <a href="./sales.html" class="nav-card">
-            <h2>💰 Sales</h2>
-            <p>Today's sales</p>
-        </a>
+        <div class="section-heading">
 
-        <a href="./sales-history.html" class="nav-card">
-            <h2>📈 History</h2>
-            <p>Sales reports</p>
-        </a>
+            <div>
+                <h2>Quick Actions</h2>
 
-        <a href="./electronics.html" class="nav-card">
-            <h2>💡 Electronics</h2>
-            <p>electronics</p>
-        </a>
-        <a href="./accessories.html" class="nav-card">
-            <h2>🔌 Accessories</h2>
-            <p>Accessories</p>
-        </a>
-        <a href="./receipt.html" class="nav-card">
-            <h2>receipt</h2>
-            <p>Receipt</p>
-        </a>
-    </div>
+                <p>
+                    Quickly access important parts
+                    of your inventory.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-nav">
+
+            <a
+                href="./product.html"
+                class="nav-card">
+
+                <span class="nav-icon">
+                    📦
+                </span>
+
+                <div>
+
+                    <h3>Products</h3>
+
+                    <p>
+                        View and manage inventory
+                    </p>
+
+                </div>
+
+                <span class="nav-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="./add-product.html"
+                class="nav-card">
+
+                <span class="nav-icon">
+                    ➕
+                </span>
+
+                <div>
+
+                    <h3>Add Product</h3>
+
+                    <p>
+                        Add new stock
+                    </p>
+
+                </div>
+
+                <span class="nav-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="./sales.html"
+                class="nav-card">
+
+                <span class="nav-icon">
+                    💰
+                </span>
+
+                <div>
+
+                    <h3>Sales</h3>
+
+                    <p>
+                        Record today's sales
+                    </p>
+
+                </div>
+
+                <span class="nav-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="./sales-history.html"
+                class="nav-card">
+
+                <span class="nav-icon">
+                    📊
+                </span>
+
+                <div>
+
+                    <h3>Sales History</h3>
+
+                    <p>
+                        View sales reports
+                    </p>
+
+                </div>
+
+                <span class="nav-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="./electronics.html"
+                class="nav-card">
+
+                <span class="nav-icon">
+                    💡
+                </span>
+
+                <div>
+
+                    <h3>Electronics</h3>
+
+                    <p>
+                        View electronic products
+                    </p>
+
+                </div>
+
+                <span class="nav-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="./accessories.html"
+                class="nav-card">
+
+                <span class="nav-icon">
+                    🔌
+                </span>
+
+                <div>
+
+                    <h3>Accessories</h3>
+
+                    <p>
+                        View accessories
+                    </p>
+
+                </div>
+
+                <span class="nav-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="./receipt.html"
+                class="nav-card">
+
+                <span class="nav-icon">
+                    🧾
+                </span>
+
+                <div>
+
+                    <h3>Receipts</h3>
+
+                    <p>
+                        View and print receipts
+                    </p>
+
+                </div>
+
+                <span class="nav-arrow">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         INVENTORY INFORMATION
+    ====================================== -->
+
+    <section class="dashboard-bottom">
+
+
+        <!-- INVENTORY GROUPS -->
+
+        <div class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>Inventory Groups</h2>
+
+                    <p>
+                        Your product categories
+                    </p>
+
+                </div>
+
+                <span class="panel-icon">
+                    📦
+                </span>
+
+            </div>
+
+
+            <div class="inventory-group">
+
+                <div class="group-top">
+
+                    <span>
+                        💡 Electronics
+                    </span>
+
+                    <strong id="electronicsCount">
+                        0
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="electronicsProgress"
+                        class="progress-electronics">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-group">
+
+                <div class="group-top">
+
+                    <span>
+                        🔌 Accessories
+                    </span>
+
+                    <strong id="accessoriesCount">
+                        0
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="accessoriesProgress"
+                        class="progress-accessories">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SYSTEM GUIDE -->
+
+        <div class="dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>System Guide</h2>
+
+                    <p>
+                        Quick reminders
+                    </p>
+
+                </div>
+
+                <span class="panel-icon">
+                    💡
+                </span>
+
+            </div>
+
+
+            <div class="system-tip">
+
+                <span>1</span>
+
+                <p>
+                    Add your products before
+                    recording sales.
+                </p>
+
+            </div>
+
+
+            <div class="system-tip">
+
+                <span>2</span>
+
+                <p>
+                    Use the Group field to separate
+                    electronics and accessories.
+                </p>
+
+            </div>
+
+
+            <div class="system-tip">
+
+                <span>3</span>
+
+                <p>
+                    Export your sales report before
+                    clearing old sales.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
 </div>
 
-<script type="module" src="./js/dashboard.js"></script>
+
+<script
+    type="module"
+    src="./js/dashboard.js">
+</script>
 
 </body>
 </html>
