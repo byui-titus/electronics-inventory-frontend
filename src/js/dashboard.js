@@ -94,7 +94,7 @@ const accessories =
 
         const total =
             electronics + accessories;
-
+            
 
         // -------------------------------
         // DISPLAY COUNTS
