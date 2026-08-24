@@ -39,9 +39,7 @@ async function loadDashboard() {
         // REVENUE
         // -------------------------------
 
-        document.getElementById(
-            'dashboardRevenue'
-        ).textContent =
+        revenueAmount =
             `UGX ${(data.totalRevenue || 0).toLocaleString()}`;
 
 
@@ -49,9 +47,7 @@ async function loadDashboard() {
         // PROFIT
         // -------------------------------
 
-        document.getElementById(
-            'dashboardProfit'
-        ).textContent =
+        profitAmount =
             `UGX ${(data.totalProfit || 0).toLocaleString()}`;
 
 
@@ -192,6 +188,92 @@ function updateDateTime() {
     ).textContent = time;
 
 }
+
+// ============================================
+// HIDE / SHOW REVENUE AND PROFIT
+// ============================================
+
+let revenueVisible = false;
+let profitVisible = false;
+
+let revenueAmount = "UGX 0";
+let profitAmount = "UGX 0";
+
+
+// --------------------------------------------
+// REVENUE CARD
+// --------------------------------------------
+
+const revenueCard =
+    document.getElementById('revenueCard');
+
+const revenueDisplay =
+    document.getElementById('dashboardRevenue');
+
+
+revenueCard.addEventListener('click', () => {
+
+    revenueVisible = !revenueVisible;
+
+    if (revenueVisible) {
+
+        revenueDisplay.textContent =
+            revenueAmount;
+
+        revenueCard.querySelector(
+            '.private-hint'
+        ).textContent = 'Click to hide';
+
+    } else {
+
+        revenueDisplay.textContent =
+            '••••••••';
+
+        revenueCard.querySelector(
+            '.private-hint'
+        ).textContent = 'Click to view';
+
+    }
+
+});
+
+
+// --------------------------------------------
+// PROFIT CARD
+// --------------------------------------------
+
+const profitCard =
+    document.getElementById('profitCard');
+
+const profitDisplay =
+    document.getElementById('dashboardProfit');
+
+
+profitCard.addEventListener('click', () => {
+
+    profitVisible = !profitVisible;
+
+    if (profitVisible) {
+
+        profitDisplay.textContent =
+            profitAmount;
+
+        profitCard.querySelector(
+            '.private-hint'
+        ).textContent = 'Click to hide';
+
+    } else {
+
+        profitDisplay.textContent =
+            '••••••••';
+
+        profitCard.querySelector(
+            '.private-hint'
+        ).textContent = 'Click to view';
+
+    }
+
+});
 
 
 // ============================================

@@ -941,3 +941,22 @@ tbody tr:hover {
     }
 
 }
+
+/* =========================================
+   PRIVATE REVENUE / PROFIT CARDS
+========================================= */
+
+.dashboard-page .private-stat-card {
+    cursor: pointer;
+}
+
+.dashboard-page .private-stat-card:hover {
+    border-color: #00d1b2;
+}
+
+.dashboard-page .private-hint {
+    display: block;
+    margin-top: 5px;
+    color: #9ca3af;
+    font-size: 10px;
+}
